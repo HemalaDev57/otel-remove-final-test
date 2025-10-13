@@ -41,6 +41,7 @@ pipeline {
                 sleep 10
                 echo 'Running Integration Tests...'
                 sleep 5
+                error('Tests failed!')
             }
         }
 
