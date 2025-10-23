@@ -7,7 +7,7 @@ pipeline {
                 stage('Compile') {
                     steps {
                         echo 'Compiling...'
-                        sleep 10
+                        sleep 5
                     }
                 }
                 stage('Package') {
@@ -38,8 +38,6 @@ pipeline {
         stage('Test') {
             steps {
                 echo 'Running Unit Tests...'
-                sleep 10
-                echo 'Running Integration Tests...'
                 sleep 5
             }
         }
