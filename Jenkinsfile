@@ -18,6 +18,28 @@ pipeline {
                 }
             }
         }
+        stage('CI') {
+            parallel {
+                stage('Test') {
+                    steps {
+                        echo 'Test...'
+                        sleep 5
+                    }
+                }
+                stage('Lint') {
+                    steps {
+                        echo 'Lint...'
+                        sleep 5
+                    }
+                }
+                stage('Scan') {
+                    steps {
+                        echo 'Scan...'
+                        sleep 5
+                    }
+                }
+            }
+        }
 
         stage('Registering build artifact') {
             steps {
